@@ -10,6 +10,9 @@
 */
 
 // Start coding here
+const findIfProductsExist = ( products,targetProduct) => {
+    return products.findIndex((pro) => pro.name === targetProduct);
+}
 
 const products = [
   { id: 2, name: "Desk Chair", price: 300, category: "Furniture", zone: "C" },

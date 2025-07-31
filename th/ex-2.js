@@ -13,6 +13,19 @@
 */
 
 // Start coding here
+const findIfProductsAvailable = (products,targetProduct,targetQuantity) => {
+    const product = products.find((pro) => pro.name === targetProduct);
+
+    if (!product) {
+        return `We don't have ${targetProduct}`;
+    }
+
+    if (targetQuantity <= product.quantity) {
+        return `${targetQuantity} ${product.name}(s) are available at ${product.zone}`;
+    } else {
+        return `Sorry, we've got only ${product.quantity} ${product.name}(s) available at ${product.zone}`;
+  }
+}
 
 const products = [
   { name: "Chocolate Milk", quantity: 10, zone: "A1" },
